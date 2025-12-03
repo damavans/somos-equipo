@@ -1,60 +1,70 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
+<?php
+// Debe ser lo primero del archivo (sin espacios antes)
+header('Content-Type: text/html; charset=UTF-8');
+?>
+
+
+<!doctype html>
+<html lang="es-AR" dir="ltr">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Hacete Socio ACA y disfrutá de un año de beneficios | Auxilio mecánico 24/7</title>
+  <meta name="description" content="Asociate al ACA y obtené auxilio mecánico 24/7, asistencia al viajero, red hotelera y beneficios exclusivos. Promo: 3 cuotas al 50% + $48.000 en combustible y 6 cuotas con 25% de descuento.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#FEC526">
 
-  <meta name="description" content="Asociate al ACA y obtené auxilio mecánico 24/7, asistencia al viajero, red hotelera y beneficios exclusivos. Promo: 3 cuotas al 50% + $48.000 en combustible y 6 cuotas con 25% de descuento." />
-  <meta name="robots" content="index, follow" />
+  <!-- Canonical / hreflang (ajustá a la URL final de prod) -->
+  <link rel="canonical" href="https://www.aca.org.ar/promociones/asociacion/0724/">
+  <link rel="alternate" hreflang="es-AR" href="https://www.aca.org.ar/promociones/asociacion/0724/">
+  <link rel="alternate" hreflang="x-default" href="https://www.aca.org.ar/promociones/asociacion/0724/">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.aca.org.ar/promociones/asociacion/0724/" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Automóvil Club Argentino">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hacete Socio ACA y disfrutá de un año de beneficios">
+  <meta property="og:description" content="Auxilio 24/7, asistencia al viajero, red hotelera y más. Promo por tiempo limitado.">
+  <meta property="og:url" content="https://www.aca.org.ar/promociones/asociacion/0724/">
+  <meta property="og:image" content="https://www.aca.org.ar/promociones/asociacion/0724/og-aca.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Membresía ACA: beneficios y asistencia en ruta.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hacete Socio ACA y disfrutá de un año de beneficios">
+  <meta name="twitter:description" content="Auxilio 24/7, asistencia al viajero, red hotelera y más.">
+  <meta name="twitter:image" content="https://www.aca.org.ar/promociones/asociacion/0724/og-aca.jpg">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Hacete Socio ACA y disfrutá de un año de beneficios" />
-  <meta property="og:description" content="Auxilio 24/7, asistencia al viajero, red hotelera y más. Promo por tiempo limitado." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.aca.org.ar/promociones/asociacion/0724/" />
-  <meta property="og:image" content="https://damavans.github.io/somos-equipo/assets/hero-back.png" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hacete Socio ACA y disfrutá de un año de beneficios" />
-  <meta name="twitter:description" content="Asociate al ACA y obtené auxilio mecánico 24/7, asistencia al viajero, red hotelera y beneficios exclusivos." />
-  <meta name="twitter:image" content="https://damavans.github.io/somos-equipo/assets/hero-back.png" />
-
-  <!-- Preconnect para recursos externos -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Preload de recursos críticos -->
-  <link rel="preload" href="assets/logo-aca.svg" as="image" type="image/svg+xml" />
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" as="style" />
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap">
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="preload" as="image" href="assets/hero-back.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/background-aca.png">
+  <link rel="preload" as="image" href="assets/logo-aca-hero.svg">
+  <link rel="preload" as="image" href="assets/promo-aca.svg">
 
   <!-- CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
-  <!-- Datos estructurados básicos -->
+  <!-- JSON-LD (mínimo seguro; podés sumar Organization/Product si querés rich results) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.aca.org.ar/promociones/asociacion/0724/#webpage",
-    "url": "https://www.aca.org.ar/promociones/asociacion/0724/",
-    "name": "Hacete Socio ACA y disfrutá de un año de beneficios",
-    "description": "Asociate al ACA y obtené auxilio mecánico 24/7, asistencia al viajero, red hotelera y beneficios exclusivos.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Automóvil Club Argentino",
-      "url": "https://www.aca.org.ar"
-    }
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "@id":"https://www.aca.org.ar/promociones/asociacion/0724/#webpage",
+    "url":"https://www.aca.org.ar/promociones/asociacion/0724/",
+    "name":"Hacete Socio ACA y disfrutá de un año de beneficios",
+    "description":"Asociate al ACA y obtené auxilio mecánico 24/7, asistencia al viajero, red hotelera y beneficios exclusivos.",
+    "publisher":{"@type":"Organization","name":"Automóvil Club Argentino","url":"https://www.aca.org.ar"}
   }
   </script>
 </head>
+
 <body>
 
   <!-- HERO FOTO -->
@@ -556,4 +566,5 @@
   </script>
 </body>
 </html>
+
 
